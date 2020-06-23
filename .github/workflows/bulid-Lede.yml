@@ -101,9 +101,9 @@ jobs:
     - name: Compile the firmware
       id: compile
       run: |
-        cd op
+          cd op
           make download -j8
-          make -j$(nproc) || make -j1 V=s
+          make -j$(($(nproc) + 1)) V=s
         
 
     - name: Build firmware
