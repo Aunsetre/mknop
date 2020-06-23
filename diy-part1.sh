@@ -20,7 +20,7 @@ rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon luci-a
 rm -rf kcptun  lua-maxminddb small
  
 # adguardhome
-# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 
 ### theme ###
 # luci-theme-argon
@@ -33,7 +33,6 @@ git clone https://github.com/lisaac/luci-app-dockerman.git
 git clone https://github.com/lisaac/luci-lib-docker.git
 
 #kcptun
-git clone https://github.com/kuoruan/luci-app-kcptun.git 
 
 # helloWorld
 git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
@@ -41,7 +40,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 
 # passwall 依赖
 #brook  chinadns-ng   dns2socks  ipt2socks  kcptun  pdnsd-alt  simple-obfs  tcping  v2ray-plugin
- git clone https://github.com/kenzok8/small
+ git clone https://github.com/kenzok8/small.git
 
 #luci-app-openclash ------------------openclash图形
 # luci-app-advancedsetting ------------------系统高级设置
@@ -58,11 +57,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 # luci-theme-opentomcat ------------------修复主机名错误（适配18.06）
 # luci-theme-opentomato ------------------修复主机名错误（适配18.06）
 # 注意
- git clone https://github.com/kenzok8/openwrt-packages.git
- cd openwrt-packages/
- rm -rf luci-app-smartdns/
- rm -rf smartdns/
-rm -rf luci-theme-argon_new/
+ git clone git clone -b master https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-passwall.git
  #
  #smartdns
 git clone  https://github.com/pymumu/openwrt-smartdns.git
