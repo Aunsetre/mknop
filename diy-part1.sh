@@ -57,7 +57,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 # luci-theme-opentomcat ------------------修复主机名错误（适配18.06）
 # luci-theme-opentomato ------------------修复主机名错误（适配18.06）
 # 注意
- git clone git clone -b master https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-passwall.git
+svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
  #
  #smartdns
 git clone  https://github.com/pymumu/openwrt-smartdns.git
