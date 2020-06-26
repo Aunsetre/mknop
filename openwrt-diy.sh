@@ -45,7 +45,9 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 git clone https://github.com/kenzok8/small
 git clone https://github.com/trojan-gfw/openwrt-trojan.git
 git clone https://github.com/kuoruan/openwrt-v2ray.git
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-ssrserver-python
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev
+git clone https://github.com/AlexZhuo/openwrt-shadowsocksr.git
+git clone -b master --depth 1 https://github.com/kuoruan/openwrt-upx.git package/openwrt-upx
 
 # 注意
 svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
