@@ -43,6 +43,9 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 # passwall 依赖
 #brook  chinadns-ng   dns2socks  ipt2socks  kcptun  pdnsd-alt  simple-obfs  tcping  v2ray-plugin
 git clone https://github.com/kenzok8/small
+git clone https://github.com/trojan-gfw/openwrt-trojan.git
+git clone https://github.com/kuoruan/openwrt-v2ray.git
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-ssrserver-python
 
 # 注意
 svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
