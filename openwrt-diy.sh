@@ -34,7 +34,7 @@ git clone https://github.com/lisaac/luci-app-dockerman.git
 git clone https://github.com/lisaac/luci-lib-docker.git
 
 #kcptun
-git clone https://github.com/kuoruan/luci-app-kcptun.git 
+#git clone https://github.com/kuoruan/luci-app-kcptun.git 
 
 # helloWorld
 #git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
@@ -53,6 +53,6 @@ git clone https://github.com/kuoruan/luci-app-kcptun.git
 #svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
  #
  #smartdns
-git clone https://github.com/pymumu/luci-app-smartdns.git
+#git clone https://github.com/pymumu/luci-app-smartdns.git
 #n1-install-program
  git clone https://github.com/tuanqing/install-program
