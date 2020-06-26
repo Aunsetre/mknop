@@ -13,11 +13,10 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ package/lean
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted package/parted
 cd package/  
 
-rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon openwrt-packages
-rm -rf kcptun  lua-maxminddb small
+rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon openwrt-packages  lua-maxminddb small
  
 # adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
