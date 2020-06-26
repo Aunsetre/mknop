@@ -13,7 +13,7 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
- 
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ package/lean
 cd package/  
 
 rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon openwrt-packages
@@ -45,25 +45,8 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 #brook  chinadns-ng   dns2socks  ipt2socks  kcptun  pdnsd-alt  simple-obfs  tcping  v2ray-plugin
 git clone https://github.com/kenzok8/small
 
-#luci-app-openclash ------------------openclash图形
-# luci-app-advancedsetting ------------------系统高级设置
-# luci-theme-atmaterial ------------------atmaterial 三合一主题（适配18.06）
-# luci-app-aliddns ------------------阿里云ddns
-# luci-theme-argon-dark-new------------------适配19.07与18.06的主题
-# luci-app-eqos ------------------依IP地址限速
-# luci-app-gost ------------------隐蔽的https代理
-# luci-app-koolproxyR ------------------去广告
-# luci-app-smartdns ------------------smartdns防污染
-# luci-app-passwall ------------------Lienol大神
-# luci-theme-argon_new ------------------适配19.07与18.06的主题
-# luci-app-ssr-plus ------------------Lean大神
-# luci-theme-opentomcat ------------------修复主机名错误（适配18.06）
-# luci-theme-opentomato ------------------修复主机名错误（适配18.06）
 # 注意
- git clone https://github.com/kenzok8/openwrt-packages.git
- cd openwrt-packages/
- rm -rf luci-app-smartdns/
- rm -rf smartdns/
+svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
  #
  #smartdns
 git clone https://github.com/pymumu/luci-app-smartdns.git
