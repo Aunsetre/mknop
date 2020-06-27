@@ -23,7 +23,7 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 ### theme ###
 # luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon.git
-sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' luci-theme-argon/htdocs/luci-static/argon/css/style.css
+sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' luci-theme-argon/htdocs/luci-static/argon/custom.css
 # oui
 #git clone https://github.com/zhaojh329/oui.git
 
