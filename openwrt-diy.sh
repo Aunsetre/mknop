@@ -54,4 +54,4 @@ svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
 git clone https://github.com/pymumu/luci-app-smartdns.git
 #n1-install-program
 git clone https://github.com/tuanqing/install-program
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted package/parted
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted
