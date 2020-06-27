@@ -13,7 +13,6 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted package/parted
 cd package/  
 
 rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon openwrt-packages  lua-maxminddb small
@@ -29,6 +28,9 @@ sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' luci-theme-argon/htdocs/luci-static/ar
 git clone https://github.com/zhaojh329/oui.git
 
 
+
+
+
 #docker
 git clone https://github.com/lisaac/luci-app-dockerman.git
 git clone https://github.com/lisaac/luci-lib-docker.git
@@ -42,17 +44,14 @@ git clone https://github.com/lisaac/luci-lib-docker.git
 
 # passwall 依赖
 #brook  chinadns-ng   dns2socks  ipt2socks  kcptun  pdnsd-alt  simple-obfs  tcping  v2ray-plugin
-#git clone https://github.com/kenzok8/small
-#git clone https://github.com/trojan-gfw/openwrt-trojan.git
-#git clone https://github.com/kuoruan/openwrt-v2ray.git
-#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev
-#git clone https://github.com/AlexZhuo/openwrt-shadowsocksr.git
+git clone https://github.com/Lienol/openwrt-package.git
 #git clone -b master --depth 1 https://github.com/kuoruan/openwrt-upx.git package/openwrt-upx
 
 # 注意
-#svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
+svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
  #
  #smartdns
-#git clone https://github.com/pymumu/luci-app-smartdns.git
+git clone https://github.com/pymumu/luci-app-smartdns.git
 #n1-install-program
- git clone https://github.com/tuanqing/install-program
+git clone https://github.com/tuanqing/install-program
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted package/parted
