@@ -39,13 +39,13 @@ git clone https://github.com/lisaac/luci-lib-docker.git
 #git clone https://github.com/kuoruan/luci-app-kcptun.git 
 
 # helloWorld
-#git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
-#git clone https://github.com/jerrykuku/luci-app-vssr.git 
+git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
+git clone https://github.com/jerrykuku/luci-app-vssr.git 
 
 # passwall 依赖
 #brook  chinadns-ng   dns2socks  ipt2socks  kcptun  pdnsd-alt  simple-obfs  tcping  v2ray-plugin
 git clone https://github.com/Lienol/openwrt-package.git
-#git clone -b master --depth 1 https://github.com/kuoruan/openwrt-upx.git package/openwrt-upx
+git clone -b master --depth 1 https://github.com/kuoruan/openwrt-upx.git package/openwrt-upx
 
 # 注意
 svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
