@@ -55,7 +55,7 @@ git clone https://github.com/pymumu/luci-app-smartdns.git
 git clone https://github.com/tuanqing/install-program
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted
 cd ..
-svn co https://github.com/coolsnowwolf/lede/trunk/ucl tools/ucl
-svn co https://github.com/coolsnowwolf/lede/trunk/upx tools/upx
+svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
+svn co https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
 echo 'tools-y += ucl upx'>>tools/Makefile
 echo '$(curdir)/upx/compile := $(curdir)/ucl/compile'>>tools/Makefile
