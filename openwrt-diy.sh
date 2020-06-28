@@ -55,3 +55,6 @@ git clone https://github.com/pymumu/luci-app-smartdns.git
 #n1-install-program
 git clone https://github.com/tuanqing/install-program
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted
+cd ..
+svn co https://github.com/coolsnowwolf/lede/trunk/ucl tools/ucl
+svn co https://github.com/coolsnowwolf/lede/trunk/upx tools/upx
