@@ -58,3 +58,5 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted
 cd ..
 svn co https://github.com/coolsnowwolf/lede/trunk/ucl tools/ucl
 svn co https://github.com/coolsnowwolf/lede/trunk/upx tools/upx
+echo 'tools-y += ucl upx'>>tools/Makefile
+echo '$(curdir)/upx/compile := $(curdir)/ucl/compile'>>tools/Makefile
