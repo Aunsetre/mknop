@@ -9,7 +9,7 @@ sed -i '$a src-git node https://github.com/nxhack/openwrt-node-packages.git' fee
 rm ./package/feeds/packages/node
 rm ./package/feeds/packages/node-*
 ./scripts/feeds install -a -p node
-wget https://github.com/upx/upx/releases/download/v3.96/upx-3.96-arm64_linux.tar.xz
-xz -d upx-3.96-arm64_linux.tar.xz
-tar xf upx-3.96-arm64_linux.tar
-mv upx-3.96-arm64_linux/upx /home/runner/work/mknop/mknop/op/staging_dir/host/bin/
+wget https://github.com/upx/upx/releases/download/v3.96/upx-3.96-amd64_linux.tar.xz
+xz -d upx-3.96-amd64_linux.tar.xz
+tar xf upx-3.96-amd64_linux.tar
+mv upx-3.96-amd64_linux/upx /home/runner/work/mknop/mknop/op/staging_dir/host/bin/
