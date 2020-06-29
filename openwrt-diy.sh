@@ -54,12 +54,11 @@ git clone https://github.com/pymumu/luci-app-smartdns.git
 #n1-install-program
 git clone https://github.com/tuanqing/install-program
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted
+
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-vlmcsd
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-syncdial
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-netdata
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipv6-helper
-cd ..
-svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
-svn co https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
-echo 'tools-y += ucl upx'>>tools/Makefile
-echo '$(curdir)/upx/compile := $(curdir)/ucl/compile'>>tools/Makefile
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/UnblockNeteaseMusic
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/UnblockNeteaseMusicGo
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-unblockmusic
