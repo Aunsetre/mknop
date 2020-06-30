@@ -24,7 +24,7 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git
 git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
 git clone https://github.com/jerrykuku/luci-app-vssr.git 
 
- passwall 依赖
+#passwall 依赖
 #brook  chinadns-ng   dns2socks  ipt2socks  kcptun  pdnsd-alt  simple-obfs  tcping  v2ray-plugin
 git clone https://github.com/Lienol/openwrt-package.git
 
