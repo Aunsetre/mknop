@@ -1,6 +1,5 @@
 #!/bin/bash
-sed -i 's/192.168.1.1/192.168.31.2/g' package/base-files/files/bin/config_generate
-sed '31.2\'/a\option gateway \'192.168.31.1\'\noption broadcast \'192.168.31.255\'\noption dns \'192.168.31.2\'' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.31.2/g' package/base-files/files/bin/config_generate
 rm ./package/feeds/packages/node
 rm ./package/feeds/packages/node-*
 ./scripts/feeds install -a -p node
