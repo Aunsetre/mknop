@@ -26,6 +26,7 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 
 ### theme ###
 # luci-theme-argon
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-argon_new
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' luci-theme-argon/htdocs/luci-static/argon/css/style.css
 
