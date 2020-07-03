@@ -20,9 +20,9 @@ rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon luci-a
 rm -rf kcptun  lua-maxminddb small
  
 # adguardhome
-#git clone https://github.com/Aunsetre/openwrt-adguardhome.git
+git clone https://github.com/Aunsetre/openwrt-adguardhome.git
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
-git clone https://github.com/rufengsuixing/luci-app-autoipsetadder.git
+#git clone https://github.com/rufengsuixing/luci-app-autoipsetadder.git
 
 ### theme ###
 # luci-theme-argon
