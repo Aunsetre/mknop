@@ -18,8 +18,8 @@ cd package/
 rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon openwrt-packages  lua-maxminddb small
 
 git clone https://github.com/jerrykuku/luci-theme-argon.git
-
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
+git clone https://github.com/Aunsetre/openwrt-adguardhome.git
 
 # helloWorld
 git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
