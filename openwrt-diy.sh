@@ -31,7 +31,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 git clone https://github.com/Lienol/openwrt-package.git
 
 # 注意
-svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
+#svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
  #
  #smartdns
 #git clone https://github.com/pymumu/luci-app-smartdns.git
@@ -41,7 +41,7 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted
 
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-syncdial
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-netdata
-#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipv6-helper
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipv6-helper
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/UnblockNeteaseMusic
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/UnblockNeteaseMusicGo
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-unblockmusic
