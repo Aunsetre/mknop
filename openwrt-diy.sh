@@ -18,7 +18,7 @@ cd package/
 rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon openwrt-packages  lua-maxminddb small
 
 git clone https://github.com/jerrykuku/luci-theme-argon.git
-sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' luci-theme-argon/htdocs/luci-static/argon/custom.css
+#sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' luci-theme-argon/htdocs/luci-static/argon/custom.css
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 git clone https://github.com/Aunsetre/openwrt-adguardhome.git
 
