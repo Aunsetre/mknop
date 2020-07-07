@@ -12,7 +12,7 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-sed -i '$a src-git node https://github.com/nxhack/openwrt-node-packages.git' feeds.conf.default
+#sed -i '$a src-git node https://github.com/nxhack/openwrt-node-packages.git' feeds.conf.default
 cd package/  
 
 rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon openwrt-packages  lua-maxminddb small
