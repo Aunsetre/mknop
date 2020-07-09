@@ -18,6 +18,8 @@ cd package/lean/
 
 rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon luci-app-smartdns openwrt-smartdns luci-app-adguardhome openwrt-packages
 rm -rf kcptun  lua-maxminddb small
+
+#sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' feeds.conf.default
  
 # adguardhome
 git clone https://github.com/Aunsetre/openwrt-adguardhome.git
