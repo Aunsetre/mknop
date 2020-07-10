@@ -20,7 +20,7 @@ on:
    types: started
 
 env:
-  REPO_URL: git@github.com:Lienol/openwrt.git
+  REPO_URL: https://github.com/Lienol/openwrt.git
   REPO_BRANCH: dev-19.07
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
