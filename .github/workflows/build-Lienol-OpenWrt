@@ -1,0 +1,152 @@
+#=================================================
+# https://github.com/P3TERX/Actions-OpenWrt
+# Description: Build OpenWrt using GitHub Actions
+# Lisence: MIT
+# Author: P3TERX
+# Blog: https://p3terx.com
+#=================================================
+
+name: uild Lienol OpenWrt
+
+on:
+  # push:
+  #   branches:
+  #     - master
+  schedule:
+    - cron: '0 18 * * *'
+  repository_dispatch:
+    types: run
+  watch:
+   types: started
+
+env:
+  REPO_URL: git@github.com:Lienol/openwrt.git
+  REPO_BRANCH: master
+  FEEDS_CONF: feeds.conf.default
+  CONFIG_FILE: .config
+  DIY_P1_SH: diy-part1.sh
+  DIY_P2_SH: diy-part2.sh
+  SSH_ACTIONS: true
+  UPLOAD_BIN_DIR: false
+  UPLOAD_FIRMWARE: true
+  UPLOAD_COWTRANSFER: false
+  UPLOAD_WETRANSFER: false
+  TZ: Asia/Shanghai
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Initialization environment
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        sudo -E apt-get -qq update
+        sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-1804)
+        sudo apt-get -y install subversion
+        sudo -E apt-get -qq autoremove --purge
+        sudo -E apt-get -qq clean
+        sudo timedatectl set-timezone "$TZ"
+        sudo mkdir -p /workdir
+        sudo chown $USER:$GROUPS /workdir
+        
+
+    - name: Clone source code
+      run: |
+        git clone --depth 1 $REPO_URL -b $REPO_BRANCH op
+        
+
+    - name: Load custom feeds
+      run: |
+        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF op/feeds.conf.default
+        chmod +x $DIY_P1_SH
+        cd op
+        
+        ../$DIY_P1_SH
+
+    - name: Update feeds
+      run: cd op && ./scripts/feeds update -a
+
+    - name: Install feeds
+      run: cd op && ./scripts/feeds install -a
+
+    - name: Load custom configuration
+      run: |
+        [ -e files ] && mv files op/files
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE op/.config
+        chmod +x $DIY_P2_SH
+        cd op
+        
+        ../$DIY_P2_SH
+
+    - name: SSH connection to Actions
+      uses: P3TERX/debugger-action@master
+      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
+
+    - name: Download package
+      id: package
+      run: |      
+        cd op
+        make defconfig
+        make download -j8
+        find dl -size -1024c -exec ls -l {} \;
+        find dl -size -1024c -exec rm -f {} \;
+
+    - name: Compile the firmware
+      id: compile
+      run: |
+          cd op
+          make download -j8
+          make -j$(nproc) || make -j1 V=s
+
+        
+
+    - name: Build firmware
+      id: build
+      run: |
+          cp op/bin/targets/armvirt/64/*.tar.gz openwrt/
+          sudo ./make -d
+          cp op/.config out/config.seed
+          
+          cd out
+          i=0
+          kernels=("4.18.7" "4.19.106" "5.4.50")
+          for x in ${kernels[*]}; do
+            cd $x
+            filename=$(ls)
+            filename=${filename%.*}
+            tar -czf "$filename.tar.gz" *.img
+            rm -f *.img
+            cd ../
+            echo "::set-env name=firmware_$((++i))::$filename"
+          done
+
+    - name: Upload firmware @ kernel 4.18.7
+      uses: actions/upload-artifact@master
+      with:
+        name: ${{ env.firmware_1 }}
+        path: out/4.18.7
+      
+    - name: Upload firmware @ kernel 4.19.106
+      uses: actions/upload-artifact@master
+      with:
+        name: ${{ env.firmware_2 }}
+        path: out/4.19.106
+      
+    - name: Upload firmware @ kernel 5.4.50
+      uses: actions/upload-artifact@master
+      with:
+        name: ${{ env.firmware_3 }}
+        path: out/5.4.50
+  
+    - name: Upload config file
+      uses: actions/upload-artifact@master
+      with:
+         name: config
+         path: out/config.seed
