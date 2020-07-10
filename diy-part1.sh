@@ -73,3 +73,4 @@ git clone  https://github.com/pymumu/openwrt-smartdns.git
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git
 #n1-install-program
  git clone https://github.com/tuanqing/install-program
+ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-cifsd
