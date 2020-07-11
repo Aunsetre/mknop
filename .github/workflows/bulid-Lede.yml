@@ -110,6 +110,7 @@ jobs:
       id: build
       run: |
           cp op/bin/targets/armvirt/64/*.tar.gz openwrt/
+          chmod +x make
           sudo ./make -d
           cp op/.config out/config.seed
           
