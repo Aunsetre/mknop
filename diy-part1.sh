@@ -22,7 +22,7 @@ rm -rf kcptun  lua-maxminddb small
 #sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' feeds.conf.default
  
 # adguardhome
-git clone https://github.com/Aunsetre/openwrt-adguardhome.git
+svn co https://github.com/kenzok8/openwrt-packages/truck/adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 #git clone https://github.com/rufengsuixing/luci-app-autoipsetadder.git
 
