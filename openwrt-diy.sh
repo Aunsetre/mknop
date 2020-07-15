@@ -10,7 +10,7 @@
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-sed -i 's/git.openwrt.org\/project\/luci.git/github.com\/Lienol\/luci.git;dev-19.07/' feeds.conf.default
+sed -i 's/git.openwrt.org\/project\/luci.git/github.com\/Lienol\/luci.git;dev-18.06/' feeds.conf.default
 
 # Add a feed source
 sed -i '$a src-git node https://github.com/nxhack/openwrt-node-packages.git' feeds.conf.default
@@ -26,6 +26,9 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/adguardhome/
 # helloWorld
 git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
 git clone https://github.com/jerrykuku/luci-app-vssr.git 
+
+git clone https://github.com/lisaac/luci-lib-docker.git
+git clone https://github.com/lisaac/luci-app-dockerman.git
 
 #passwall 依赖
 #brook  chinadns-ng   dns2socks  ipt2socks  kcptun  pdnsd-alt  simple-obfs  tcping  v2ray-plugin
