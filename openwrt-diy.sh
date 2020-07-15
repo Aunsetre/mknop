@@ -37,19 +37,14 @@ git clone https://github.com/lisaac/luci-app-dockerman.git
 #brook  chinadns-ng   dns2socks  ipt2socks  kcptun  pdnsd-alt  simple-obfs  tcping  v2ray-plugin
 git clone https://github.com/Lienol/openwrt-package.git
 
-# 注意
-#svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
- #
- #smartdns
-#git clone https://github.com/pymumu/luci-app-smartdns.git
 #n1-install-program
 git clone https://github.com/tuanqing/install-program
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted
 #svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-flowoffload
 #svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-cifsd
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-syncdial
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-syncdial
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-netdata
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipv6-helper
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipv6-helper
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/UnblockNeteaseMusic
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/UnblockNeteaseMusicGo
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-unblockmusic
