@@ -10,7 +10,7 @@
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-sed -i 's/git.openwrt.org\/project\/luci.git/github.com\/Lienol\/luci.git;dev-18.06/' feeds.conf.default
+sed -i 's/git.openwrt.org\/project\/luci.git/github.com\/Lienol\/luci.git;dev-17.01/' feeds.conf.default
 
 # Add a feed source
 sed -i '$a src-git node https://github.com/nxhack/openwrt-node-packages.git' feeds.conf.default
@@ -18,7 +18,7 @@ cd package/
 
 rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon openwrt-packages  lua-maxminddb small
 
-git clone https://github.com/jerrykuku/luci-theme-argon.git
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 #sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' luci-theme-argon/htdocs/luci-static/argon/custom.css
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 svn co https://github.com/kenzok8/openwrt-packages/trunk/adguardhome/
