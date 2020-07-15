@@ -42,8 +42,8 @@ git clone https://github.com/Lienol/openwrt-package.git
 #n1-install-program
 git clone https://github.com/tuanqing/install-program
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/parted
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-flowoffload
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-cifsd
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-flowoffload
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-cifsd
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-syncdial
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-netdata
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipv6-helper
