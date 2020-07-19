@@ -1,3 +1,4 @@
+#!/bin/bash
 #=============================================================
 # https://github.com/P3TERX/Actions-OpenWrt
 # File name: diy-part1.sh
@@ -16,13 +17,11 @@
 cd package/lean/
 rm -rf luci-app-vssr  luci-lib-docker luci-app-dockerman luci-theme-argon luci-app-smartdns openwrt-smartdns luci-app-adguardhome openwrt-packages
 rm -rf kcptun  lua-maxminddb small
-#sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' feeds.conf.default
 # adguardhome
 svn co https://github.com/kenzok8/openwrt-packages/truck/adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 ### theme ###
 # luci-theme-argon
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-argon_new
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' luci-theme-argon/htdocs/luci-static/argon/css/style.css
 #京东签到
