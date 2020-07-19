@@ -24,7 +24,6 @@ rm -rf kcptun  lua-maxminddb small
 # adguardhome
 svn co https://github.com/kenzok8/openwrt-packages/truck/adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
-#git clone https://github.com/rufengsuixing/luci-app-autoipsetadder.git
 
 ### theme ###
 # luci-theme-argon
@@ -66,11 +65,10 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 # luci-theme-opentomcat ------------------修复主机名错误（适配18.06）
 # luci-theme-opentomato ------------------修复主机名错误（适配18.06）
 # 注意
-svn checkout https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall/
+svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall
  #
  #smartdns
 git clone  https://github.com/pymumu/openwrt-smartdns.git
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git
 #n1-install-program
- git clone https://github.com/tuanqing/install-program
- svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-cifsd
+git clone https://github.com/tuanqing/install-program
