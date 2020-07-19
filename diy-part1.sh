@@ -24,7 +24,7 @@ rm -rf kcptun  lua-maxminddb small
 # adguardhome
 svn co https://github.com/kenzok8/openwrt-packages/truck/adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
-#git clone https://github.com/rufengsuixing/luci-app-autoipsetadder.git
+git clone https://github.com/rufengsuixing/luci-app-autoipsetadder.git
 
 ### theme ###
 # luci-theme-argon
