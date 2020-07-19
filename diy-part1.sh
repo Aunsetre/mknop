@@ -1,4 +1,3 @@
-#!/bin/bash
 #=============================================================
 # https://github.com/P3TERX/Actions-OpenWrt
 # File name: diy-part1.sh
