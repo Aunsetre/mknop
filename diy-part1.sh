@@ -34,7 +34,7 @@ sed -i 's/Microsoft Yahei/Sarasa UI SC/ ' luci-theme-argon/htdocs/luci-static/ar
 
 #京东签到
 git clone https://github.com/jerrykuku/node-request.git
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
+#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
 
 
 #docker
