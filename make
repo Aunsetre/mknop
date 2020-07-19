@@ -304,7 +304,7 @@ while [ "$1" ]; do
         echo " clean up ok!" && exit
         ;;
     -d | --default)
-        : ${rootsize:=1024}
+        : ${rootsize:=512}
         : ${firmware:="${firmwares[0]}"}
         : ${kernel:="all"}
         ;;
