@@ -19,7 +19,7 @@ rm -rf luci-app-vssr adguardhome  luci-lib-docker luci-app-dockerman luci-theme-
 rm -rf kcptun  lua-maxminddb small
 
 # adguardhome
-svn co https://github.com/kenzok8/openwrt-packages/truck/adguardhome
+svn co https://github.com/kenzok8/openwrt-packages/trunk/adguardhome/
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
 
 ### theme ###
